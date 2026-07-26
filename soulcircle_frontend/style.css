@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.menu {
+    margin-top: 40px;
+}
+
+.card {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    width: 200px;
+    font-weight: bold;
+}
+
+.card:hover {
+    background: #ddd;
+}
