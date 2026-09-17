@@ -39,3 +39,18 @@ The platform is explicitly designed for resource-constrained environments: it co
 ---
 
 ## 🏗 System Architecture
+
+User (Mobile / Web Browser) │ ▼ [ Next.js Frontend / UI Layer ] │ (HTTPS / REST) ▼ [ Safety & Emotion Filter Layer ] ├── Safety Evaluation (safety_dataset.csv) └── Valence & Emotion Classifier (emotion_dataset.csv) │ ├── [Trigger Detected] ──► Immediate Helpline / Safe Exit UI │ └── [Safe Input] ──────► [ LLM Inference Engine ] │ ▼ [ Supabase State Store ] (Encrypted Sessions)
+
+
+---
+
+## 🚀 Quickstart & Local Setup
+
+### Backend Setup
+```bash
+cd soulcircle_backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
